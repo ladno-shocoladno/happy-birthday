@@ -5,8 +5,7 @@
     position: fixed;
     left: 50%;
     top: 45%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     background: center no-repeat #fff;
     z-index: 9999999999999999999999;
     font-size: 50px;
@@ -97,47 +96,74 @@ img {
 }
 
 @keyframes spin {
-    0% {
-        transform: rotateZ(0);
-    }
-
-    25% {
-        transform: rotateZ(10deg);
-    }
-
-    50% {
-        transform: rotateZ(0deg);
-    }
-
-    75% {
-        transform: rotateZ(-10deg);
-    }
+    0% { transform: rotateZ(0); }
+    25% { transform: rotateZ(10deg); }
+    50% { transform: rotateZ(0deg); }
+    75% { transform: rotateZ(-10deg); }
 }
 
 .type-wrap {
     font-size: 25px;
     color: #C4515C;
-
+    min-height: 80px; /* Резервируем место под 2-3 строки текста */
+    margin-bottom: 20px;
 }
 
+
 .cake {
-    transform: translateY(-50%);
-    transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
-    padding-top: 250px;
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 40px auto 30px auto !important;
+    display: block !important;
+    max-width: 250px; 
+    text-align: center;
+}
+
+.cake img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.birthday-letter {
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 5px solid #C4515C;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    font-family: 'Georgia', serif;
+    white-space: pre-wrap;
+    max-width: 600px;
+    width: 90%;
+}
+
+.letter-body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a4a4a;
 }
 
 @media (max-width: 768px) {
-    .type-wrap {
-        font-size: 20px !important; 
-        line-height: 1.4 !important;
-        padding: 0 15px;
+    .letter-body {
+        font-size: 15px;
     }
     
-    /* Снижаем размер большого имени Nuriya на главном экране */
+    .type-wrap {
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+        padding: 0 15px;
+        min-height: 60px !important;
+    }
+    
     .area {
         font-size: 45px !important;
         letter-spacing: -3px !important;
+    }
+
+    .cake {
+        max-width: 160px;
+        margin: 20px auto !important;
     }
 }

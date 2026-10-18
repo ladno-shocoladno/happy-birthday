@@ -425,3 +425,29 @@ document.addEventListener("DOMContentLoaded", function () {
         confetti.resize();
     });
 });
+$('#play').click(function() {
+    var song = $('.song')[0];
+    if (song) {
+        song.play().catch(function(error) {
+            console.log("Аудио заблокировано:", error);
+        });
+    }
+
+    $('.loader').fadeOut('slow', function() {
+        $(this).remove();
+        
+        $('.main').fadeIn('2000', function() {
+            // Запускаем стандартные анимации шаблона
+            if (typeof beginAnimation === 'function') {
+                beginAnimation();
+            }
+            
+            // ИСПРАВЛЕНО: Сразу после появления главного экрана плавно проявляем письмо за 2 секунды
+            $('.birthday-letter').css({
+                'opacity': '1',
+                'transform': 'translateY(0)'
+            });
+        });
+    });
+});
+

@@ -18,7 +18,6 @@
     </div>
     <audio class="song" controls loop>
         <source src="music.mp3">
-        </source>
         Your browser isn't invited for super fun audio time.
     </audio>
     <canvas id="confetti"></canvas>
@@ -37,22 +36,21 @@
                 <div class="col-12 text-center">
                     <div class="type-wrap">
                         <div id="typed-strings" class="typing">
-                            <h2>Happy Birthday <i id="nae">Nuri</i>! 🎉</h2>
-                            <h2>Have a wonderful day! ✨</h2>
-                            <h2>Filled with joy and happiness. 💖</h2>
-                            <h2>May all your dreams come true! 🌟</h2>
-                            <h2>Wishing you endless smiles and laughter! 😊</h2>
-                            <h2>Cheering for your success and bright future! 🚀</h2>
-                            <h2>May this year be your absolute best! 🎂</h2>
-                            <h2>Shine bright today and every single day! 💎</h2>
-                            <h2>Wishing you infinite inspiration and energy! 🔥</h2>
-                            <h2>May your world be full of love and warmth! 🌸</h2>
-                            <h2>To new heights, new achievements, and pure joy! 🍾</h2>
+                            <h2>С днём рождения, <i id="nae">Нури</i>! 🎉</h2>
+                            <h2>Пусть этот день будет потрясающим! ✨</h2>
+                            <h2>Наполненным радостью и счастьем! 💖</h2>
+                            <h2>Пусть все твои мечты сбываются! 🌟</h2>
+                            <h2>Улыбок, искренней радости и тепла! 😊</h2>
+                            <h2>Верю в твой успех и яркое будущее! 🚀</h2>
+                            <h2>Пусть этот год станет самым лучшим! 🎂</h2>
+                            <h2>Сияй ярко сегодня и каждый день! 💎</h2>
+                            <h2>Бесконечного вдохновения и сил! 🔥</h2>
+                            <h2>Пусть вокруг будет любовь и гармония! 🌸</h2>
+                            <h2>К новым вершинам и чистой радости! 🍾</h2>
                         </div>
                         <span id="typed" style="white-space: pre-wrap; word-wrap: break-word;"></span>
                     </div>
                 </div>
-
 
 
                 <div class="col-12 col-xl-3 cake">
@@ -60,11 +58,27 @@
                 </div>
             </div>
         </div>
+
+        <div class="birthday-letter"
+            style="opacity: 0; transform: translateY(20px); transition: opacity 2s ease, transform 2s ease;">
+            <div class="letter-body">С днем рождения, принцесса Нури! 🥳
+
+                Желаю тебе: 🩺 Чтобы работа в реанимации была в кайф, а не в стресс. Поменьше буйных пациентов,
+                желательно живых конечно🤫 Меньше секретов от меня (цветы и свиданки это уже палево, завязывай! ).
+                Больше поводов для твоего любимого бунтарства, но только в правильном направлении!
+
+                Будь самой счастливой, даже если планируешь скрывать это от меня еще лет десять! Люблю очень сильно
+                родная моя ❤️</div>
+        </div>
+
+
+
         <img src="img/Balloon-Border.png" width="100%" class="balloon-border">
     </div>
 </body>
-<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
 <script src="js/jquery.js"></script>
+<!-- ИСПРАВЛЕНО: Подключаем локальный скрипт снежинок из твоего репозитория вместо CDN -->
+<script src="Happy Birthday_files/snowflakes.js"></script>
 <script src="js/typed.min.js"></script>
 <script src="js/script.js"></script>
 
